@@ -1936,7 +1936,7 @@
           <span>Exit</span>
         </button>
 
-        <button id="callBtn" class="vt-btn vt-btn-dangerous" type="button">
+        <button id="callBtn" class="vt-btn vt-btn-dangerous" type="button" style="visibility: hidden;">
           <span>Call</span>
         </button>
 

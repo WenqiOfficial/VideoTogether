@@ -1936,7 +1936,7 @@
           <span>退 出</span>
         </button>
 
-        <button id="callBtn" class="vt-btn vt-btn-dangerous" type="button">
+        <button id="callBtn" class="vt-btn vt-btn-dangerous" type="button" style="visibility: hidden;">
           <span>通 话</span>
         </button>
 
