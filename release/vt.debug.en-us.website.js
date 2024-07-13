@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Video Together 一起看视频
-// @namespace    https://2gether.video/
+// @namespace    https://2gether.wenqi.icu/
 // @version      1708517473
 // @description  Watch video together 一起看视频
 // @author       maggch@outlook.com
 // @match        *://*/*
-// @icon         https://2gether.video/icon/favicon-32x32.png
+// @icon         https://2gether.wenqi.icu/icon/favicon-32x32.png
 // @grant        none
 // ==/UserScript==
 
@@ -355,7 +355,7 @@
     if (window.videoTogetherExtension === undefined) {
         return;
     }
-    if (window.location.hostname == 'local.2gether.video') {
+    if (window.location.hostname == 'local.2gether.wenqi.icu') {
         return;
     }
     let vtArgM3u8Url = undefined;
@@ -1816,7 +1816,7 @@
       </span>
     </a>
 
-    <a href="https://setting.2gether.video/" target="_blank" id="videoTogetherSetting" type="button"
+    <a href="https://setting.2gether.wenqi.icu/" target="_blank" id="videoTogetherSetting" type="button"
       aria-label="Setting" class="vt-modal-setting vt-modal-title-button">
       <span class="vt-modal-close-x">
         <span role="img" aria-label="Setting" class="vt-anticon vt-anticon-close vt-modal-close-icon">
@@ -1889,9 +1889,9 @@
         </div>
         <div style="display: block;">
           <a target="_blank" style="display: block;padding: 5px 5px;"
-            href="https://local.2gether.video/local_videos.en-us.html">View downloaded videos</a>
+            href="https://local.2gether.wenqi.icu/local_videos.en-us.html">View downloaded videos</a>
           <a target="_blank" style="display: block;padding: 5px 5px;"
-            href="https://local.2gether.video/about.en-us.html">Copyright Notice</a>
+            href="https://local.2gether.wenqi.icu/about.en-us.html">Copyright Notice</a>
         </div>
       </div>
       <div id="voicePannel" class="content" style="display: none;">
@@ -2970,9 +2970,9 @@
 
         HelpButtonOnClick() {
             this.Maximize();
-            let url = 'https://2gether.video/guide/qa.html';
+            let url = 'https://2gether.wenqi.icu/guide/qa.html';
             if (vtRuntime == "website") {
-                url = "https://2gether.video/guide/website_qa.html"
+                url = "https://2gether.wenqi.icu/guide/website_qa.html"
             }
             window.open(url, '_blank');
         }
@@ -3098,9 +3098,9 @@
             }
             this.cspBlockedHost = {};
 
-            this.video_together_host = 'http://127.0.0.1:5001/';
-            this.video_together_main_host = 'https://vt.panghair.com:5000/';
-            this.video_together_backup_host = 'https://api.chizhou.in/';
+            this.video_together_host = 'https://cloud.wenqi.icu:5506/';
+            this.video_together_main_host = 'https://cloud.wenqi.icu:5506/';
+            this.video_together_backup_host = 'https://2gether.zeroarea.top/';
             this.video_tag_names = ["video", "bwp-video", "fake-iframe-video"]
 
             this.timer = 0
@@ -3268,7 +3268,7 @@
             if (china) {
                 return ''
             } else {
-                return `https://2gether.video/${language}/easyshare.html?VideoTogetherRole=3&VideoTogetherRoomName=${this.roomName}&VideoTogetherTimestamp=9999999999&VideoTogetherUrl=&VideoTogetherPassword=${this.password}`;
+                return `https://2gether.wenqi.icu/${language}/easyshare.html?VideoTogetherRole=3&VideoTogetherRoomName=${this.roomName}&VideoTogetherTimestamp=9999999999&VideoTogetherUrl=&VideoTogetherPassword=${this.password}`;
             }
         }
 
@@ -3865,7 +3865,7 @@
                     try {
                         if (firstSync) {
                             if (!isWeb()) {
-                                window.videoTogetherFlyPannel.videoTogetherSetting.href = "https://setting.2gether.video/v2.html";
+                                window.videoTogetherFlyPannel.videoTogetherSetting.href = "https://setting.2gether.wenqi.icu/v2.html";
                                 show(select('#videoTogetherSetting'));
                             } else {
                                 // website

@@ -54,7 +54,7 @@ async function handleRequest(req) {
 <head>
     <title>${WORKER_HOSTNAME}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script src="https://2gether.video/release/extension.website.user.js"></script>
+    <script src="https://2gether.wenqi.icu/release/extension.website.user.js"></script>
 </head>
 
 <body>
@@ -87,7 +87,7 @@ async function handleRequest(req) {
         }
     </script>
     <p>无需安装插件,输入网址,点击前往,即可一起看视频</p>
-    <p>在线版仅支持小部分网站,安装插件后可以在电脑手机平板上一起观看任意网站,访问插件主页获取安装说明<a href="http://2gether.video/">http://2gether.video/</a></p>
+    <p>在线版仅支持小部分网站,安装插件后可以在电脑手机平板上一起观看任意网站,访问插件主页获取安装说明<a href="http://2gether.wenqi.icu/">http://2gether.wenqi.icu/</a></p>
     <input id="urlInput" placeholder="输入视频网站地址" />
     <button onclick="go()">前往</button>
     <p>虽然本站不会存储你的任何信息,但是为了您的数据安全考虑,请不要在跳转后的页面输入密码或登录</p>
@@ -205,7 +205,7 @@ class Injecter {
 
     element(element) {
         console.log(element)
-        element.prepend('<script src="https://2gether.video/release/extension.website.user.js"></script>', { html: true })
+        element.prepend('<script src="https://2gether.wenqi.icu/release/extension.website.user.js"></script>', { html: true })
     }
 }
 
@@ -224,7 +224,7 @@ class Dependency {
             // TODO port
             return origin;
         }
-        if(url.hostname.endsWith("2gether.video")){
+        if(url.hostname.endsWith("2gether.wenqi.icu")){
             return origin;
         }
         if(url.pathname.endsWith(".ts")){

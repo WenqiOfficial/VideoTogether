@@ -18,7 +18,7 @@
 // @connect      api.panghair.com
 // @connect      vt.panghair.com
 // @connect      raw.githubusercontent.com
-// @connect      videotogether.oss-cn-hangzhou.aliyuncs.com
+// @connect      2gether.wenqi.icu
 // ==/UserScript==
 
 (async function () {
@@ -237,7 +237,7 @@
                     'data': data
                 }))
                 .catch(() => {
-                    fetch(`https://videotogether.oss-cn-hangzhou.aliyuncs.com/release/vt.${language}.${vtType}.js?vtRefreshVersion=` + vtRefreshVersion)
+                    fetch(`https://2gether.wenqi.icu/release/vt.${language}.${vtType}.js?vtRefreshVersion=` + vtRefreshVersion)
                         .then(r => r.text())
                         .then(data => getGM().setValue('PrivateCachedVt', {
                             'version': vtRefreshVersion,
@@ -646,7 +646,7 @@
             script.src = `http://127.0.0.1:7000/release/vt.debug.${language}.user.js?timestamp=` + parseInt(Date.now());
             break;
         case "userscript_beta":
-            script.src = `https://raw.githubusercontent.com/WenqiOfficial/VideoTogether/voice/release/vt.${language}.user.js?timestamp=` + parseInt(Date.now());
+            script.src = `https://2gether.wenqi.icu/release/vt.${language}.user.js?timestamp=` + parseInt(Date.now());
             break;
         case "website":
             script.src = `https://2gether.wenqi.icu/release/vt.${language}.website.js?timestamp=` + version;
