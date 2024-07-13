@@ -3627,7 +3627,7 @@
                     res(this.m3u8UrlTestResult[testUrl])
                 }
                 const abortController = new AbortController();
-                VideoTogetherFetch(testUrl, { signal: abortController.signal }).then(response => {
+                // VideoTogetherFetch(testUrl, { signal: abortController.signal }).then(response => {
                 //     const contentType = response.headers.get('Content-Type')
                 //     if (contentType.startsWith('video/')) {
                 //         rtnType('video');
