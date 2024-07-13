@@ -1884,7 +1884,35 @@
             href="https://local.2gether.wenqi.icu/about.zh-cn.html">版权说明</a>
         </div>
       </div>
-    
+      <div id="voicePannel" class="content" style="display: none;">
+        <div id="videoVolumeCtrl" style="margin-top: 5px;width: 100%;text-align: left;">
+          <span style="margin-top: 5px;display: inline-block;width: 100px;margin-left: 20px;">视频音量</span>
+          <div class="range-slider">
+            <input id="videoVolume" class="slider" type="range" value="100" min="0" max="100">
+          </div>
+
+        </div>
+        <div id="callVolumeCtrl" style="margin-top: 5px;width: 100%;text-align: left;">
+          <span style="margin-top: 5px;display: inline-block;width: 100px;margin-left: 20px;">通话音量</span>
+          <div class="range-slider">
+            <input id="callVolume" class="slider" type="range" value="100" min="0" max="100">
+          </div>
+        </div>
+        <div id="iosVolumeErr" style="display: none;">
+          <p>IOS不支持音量调节</p>
+        </div>
+        <!-- <div style="margin-top: 5px;width: 100%;text-align: left;">
+          <span
+            style="margin-top: 0px;display: inline-block;margin-left: 20px; margin-right: 10px;">通话降噪</span>
+          <label class="toggler-wrapper style-1">
+            <input id="voiceNc" type="checkbox">
+            <div class="toggler-slider">
+              <div class="toggler-knob"></div>
+            </div>
+          </label>
+
+        </div> -->
+      </div>
 
     </div>
 
@@ -1907,6 +1935,11 @@
         <button id="videoTogetherExitButton" class="vt-btn vt-btn-dangerous" type="button">
           <span>退 出</span>
         </button>
+
+        <button id="callBtn" class="vt-btn vt-btn-dangerous" type="button">
+          <span>通 话</span>
+        </button>
+
 
         <div id="callConnecting" class="lds-ellipsis" style="display: none;">
           <div></div>
