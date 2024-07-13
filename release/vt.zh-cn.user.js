@@ -3098,9 +3098,9 @@
             }
             this.cspBlockedHost = {};
 
-            this.video_together_host = 'https://vt.panghair.com:5000/';
-            this.video_together_main_host = 'https://vt.panghair.com:5000/';
-            this.video_together_backup_host = 'https://api.chizhou.in/';
+            this.video_together_host = 'https://cloud.wenqi.icu:5005/';
+            this.video_together_main_host = 'https://cloud.wenqi.icu:5005/';
+            this.video_together_backup_host = 'https://2gether.zeroarea.top/';
             this.video_tag_names = ["video", "bwp-video", "fake-iframe-video"]
 
             this.timer = 0

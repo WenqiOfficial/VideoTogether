@@ -1,0 +1,24 @@
+{
+    "sponsors": [
+        {
+            "room": "mainer",
+            "backgroundUrl": "https://cloud.wenqi.icu:5221/api/v3/file/get/962/pic06new.webp?sign=TG858chNCBA_RPFrGm29XgY_4JtljZHobSUyVHBzhwA%3D%3A0"
+        }
+    ],
+    "blockDomains": [
+        "iqiyi.com",
+        "qq.com",
+        "youku.com",
+        "bilibili.com"
+    ],
+    "reechoToken": "Bearer sk-e1....",
+    "reechoQuota": {
+        "a299cd13.......": {
+            "quota": 10,
+            "used": 0
+        }
+    },
+    "chinaIpList": "./chn_ip.txt",
+    "krakenGlobalEndpoint": "http://127.0.0.1:7002/",
+    "krakenChinaEndpoint": "http://127.0.0.1:7002/"
+}

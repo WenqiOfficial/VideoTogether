@@ -1,19 +1,19 @@
 // ==UserScript==
 // @name         Video Together 一起看视频
-// @namespace    https://2gether.video/
+// @namespace    https://2gether.wenqi.icu/
 // @version      1706416707
 // @description  Watch video together 一起看视频
 // @author       maggch@outlook.com
 // @match        *://*/*
-// @icon         https://2gether.video/icon/favicon-32x32.png
+// @icon         https://2gether.wenqi.icu/icon/favicon-32x32.png
 // @grant        GM.xmlHttpRequest
 // @grant        GM_addElement
 // @grant        GM.setValue
 // @grant        GM.getValue
 // @grant        GM.getTab
 // @grant        GM.saveTab
-// @connect      2gether.video
-// @connect      api.2gether.video
+// @connect      2gether.wenqi.icu
+// @connect      api.2gether.wenqi.icu
 // @connect      api.chizhou.in
 // @connect      api.panghair.com
 // @connect      vt.panghair.com
@@ -65,7 +65,7 @@
                             window.location.origin === iframe.contentWindow.location.origin) {
                             console.log("inject to iframe");
                             const script = document.createElement('script');
-                            script.src = "https://2gether.video/release/extension.website.user.js";
+                            script.src = "https://2gether.wenqi.icu/release/extension.website.user.js";
                             iframe.contentWindow.document.body.appendChild(script);
                             iframe.contentWindow.VideoTogetherParentInject = true;
                         }
@@ -230,7 +230,7 @@
             cachedVt = privateCachedVt['data'];
         } else {
             console.log("Refresh VT");
-            fetch(`https://2gether.video/release/vt.${language}.${vtType}.js?vtRefreshVersion=` + vtRefreshVersion)
+            fetch(`https://2gether.wenqi.icu/release/vt.${language}.${vtType}.js?vtRefreshVersion=` + vtRefreshVersion)
                 .then(r => r.text())
                 .then(data => getGM().setValue('PrivateCachedVt', {
                     'version': vtRefreshVersion,
@@ -328,7 +328,7 @@
 
         if (isTrustPageCache == undefined) {
             const domains = [
-                '2gether.video', 'videotogether.github.io'
+                '2gether.wenqi.icu', 'videotogether.github.io'
             ];
 
             const hostname = window.location.hostname;
@@ -348,7 +348,7 @@
             switch (e.data.type) {
                 case 13: {
                     let url = new URL(e.data.data.url);
-                    if (!url.hostname.endsWith("2gether.video")
+                    if (!url.hostname.endsWith("2gether.wenqi.icu")
                         && !url.hostname.endsWith("chizhou.in")
                         && !url.hostname.endsWith("panghair.com")
                         && !url.hostname.endsWith("rpc.kraken.fm")
@@ -390,7 +390,7 @@
                 }
                 case 15: {
                     if (window.location.hostname.endsWith("videotogether.github.io")
-                        || window.location.hostname.endsWith("2gether.video")
+                        || window.location.hostname.endsWith("2gether.wenqi.icu")
                         || e.data.data.key.startsWith("Public")
                         || isWebsite) {
                         getGM().setValue(e.data.data.key, e.data.data.value)
@@ -567,7 +567,7 @@
     wrapper.innerHTML = `<div id="videoTogetherLoading">
     <div id="videoTogetherLoadingwrap">
         <img style="display: inline;" src="data:image/png;base64,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">
-        <a target="_blank" href="http://2gether.video/guide/qa.html">loading ...</a>
+        <a target="_blank" href="http://2gether.wenqi.icu/guide/qa.html">loading ...</a>
     </div>
 </div>
 
@@ -613,7 +613,7 @@
     script.type = 'text/javascript';
     switch (type) {
         case "userscript":
-            script.src = `https://2gether.video/release/vt.${language}.user.js?timestamp=` + version;
+            script.src = `https://2gether.wenqi.icu/release/vt.${language}.user.js?timestamp=` + version;
             break;
         case "Chrome":
         case "Safari":
@@ -626,7 +626,7 @@
                 if (hotUpdated) {
                     return;
                 }
-                if (e.blockedURI.indexOf('2gether.video') != -1) {
+                if (e.blockedURI.indexOf('2gether.wenqi.icu') != -1) {
                     urlDisabled = true;
                 }
                 if (urlDisabled) {
@@ -646,10 +646,10 @@
             script.src = `http://127.0.0.1:7000/release/vt.debug.${language}.user.js?timestamp=` + parseInt(Date.now());
             break;
         case "userscript_beta":
-            script.src = `https://raw.githubusercontent.com/VideoTogether/VideoTogether/voice/release/vt.${language}.user.js?timestamp=` + parseInt(Date.now());
+            script.src = `https://raw.githubusercontent.com/WenqiOfficial/VideoTogether/voice/release/vt.${language}.user.js?timestamp=` + parseInt(Date.now());
             break;
         case "website":
-            script.src = `https://2gether.video/release/vt.${language}.website.js?timestamp=` + version;
+            script.src = `https://2gether.wenqi.icu/release/vt.${language}.website.js?timestamp=` + version;
             break;
         case "website_debug":
             script.src = `http://127.0.0.1:7000/release/vt.debug.${language}.website.js?timestamp=` + parseInt(Date.now());
@@ -690,7 +690,7 @@
         if (!ExtensionInitSuccess) {
             let script = document.createElement('script');
             script.type = 'text/javascript';
-            script.src = `https://videotogether.oss-cn-hangzhou.aliyuncs.com/release/vt.${language}.user.js`;
+            script.src = `https://2gether.wenqi.icu/release/vt.${language}.user.js`;
             (document.body || document.documentElement).appendChild(script);
             try {
                 if (isWebsite) {

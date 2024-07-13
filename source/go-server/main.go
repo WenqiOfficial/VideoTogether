@@ -36,7 +36,7 @@ func main() {
 	case "debug":
 		panic(http.ListenAndServe("127.0.0.1:5001", server))
 	case "prod":
-		panic(http.ListenAndServeTLS(":5000", "./certificate.crt", "./private.pem", server))
+		panic(http.ListenAndServeTLS(":5000", "./main.cer", "./main.key", server))
 	default:
 		panic("unknown env")
 	}
