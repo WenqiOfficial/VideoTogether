@@ -1838,7 +1838,7 @@
           <span id="videoTogetherRoleText"></span>
           <span id="memberCount"></span>
         </div>
-        <div id="videoTogetherStatusText" style="height: 22.5px;"><a target='_blank' href='https://2gether.wenqi.icu/zh-cn/guide/edge.html'>现已支持安卓 Edge 浏览器</a></div>
+        <div id="videoTogetherStatusText" style="height: 22.5px;display:none;"><a target='_blank' href='https://2gether.wenqi.icu/zh-cn/guide/edge.html'>现已支持安卓 Edge 浏览器</a></div>
         <div style="margin-bottom: 10px;">
           <span id="videoTogetherRoomNameLabel">房间</span>
           <input id="videoTogetherRoomNameInput" autocomplete="off" placeholder="请输入房间名">
