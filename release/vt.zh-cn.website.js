@@ -2562,7 +2562,6 @@
 
                 wrapper.querySelector("#videoTogetherMinimize").onclick = () => { this.Minimize() }
                 wrapper.querySelector("#videoTogetherMaximize").onclick = () => { this.Maximize() }
-                wrapper.querySelector("#2getherMaximize").onclick = () => { this.Maximize() }
                 ["", "webkit"].forEach(prefix => {
                     document.addEventListener(prefix + "fullscreenchange", (event) => {
                         if (document.fullscreenElement || document.webkitFullscreenElement) {
