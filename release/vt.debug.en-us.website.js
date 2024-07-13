@@ -1936,6 +1936,10 @@
           <span>Exit</span>
         </button>
 
+        <button id="callBtn" class="vt-btn vt-btn-dangerous" type="button">
+          <span>Call</span>
+        </button>
+
 
         <div id="callConnecting" class="lds-ellipsis" style="display: none;">
           <div></div>
