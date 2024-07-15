@@ -98,7 +98,8 @@ func (h *slashFix) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "OPTIONS" {
 		return
 	}
-	log.Printf("%s %s %s\n", r.RemoteAddr, r.Method, r.URL)
+	// log.Printf("%s %s %s\n", r.RemoteAddr, r.Method, r.URL)
+	log.Printf("%s %s %s\n", GetIP(r), r.Method, r.URL)
 	h.qps.Count(r.URL.Path)
 	h.mux.ServeHTTP(w, r)
 }

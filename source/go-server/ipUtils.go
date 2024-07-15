@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"encoding/binary"
 	"net"
+	"net/http"
 	"os"
 	"strings"
 )
@@ -64,4 +65,30 @@ func (r IPRanges) search(ip net.IP) bool {
 		}
 	}
 	return false
+}
+
+// GetIP returns request real ip.
+func GetIP(r *http.Request) string {
+	ip := r.Header.Get("X-Real-IP")
+	if net.ParseIP(ip) != nil {
+		return "Reverse IP: " + ip
+	}
+
+	ip = r.Header.Get("X-Forwarded-For")
+	for _, i := range strings.Split(ip, ",") {
+		if net.ParseIP(i) != nil {
+			return "Reverse IP: " + i
+		}
+	}
+
+	ip, _, err := net.SplitHostPort(r.RemoteAddr)
+	if err != nil {
+		return ""
+	}
+
+	if net.ParseIP(ip) != nil {
+		return "Real    IP: " + ip
+	}
+
+	return ""
 }
